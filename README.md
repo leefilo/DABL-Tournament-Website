@@ -25,5 +25,3 @@ Database: MySQL / PostgreSQL
 Hosting: AWS (EC2, S3, RDS)
 
 Version Control: Git & GitHub
-
-Installation

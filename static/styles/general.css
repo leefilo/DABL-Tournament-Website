@@ -1,0 +1,71 @@
+.matches-body {
+    background-color: #fff;
+    font-family: 'Noto Sans Korean';
+}
+
+.match-results-body {
+    font-family: 'Noto Sans Korean';
+}
+
+.homepage-body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Noto Sans Korean';
+    height: 6500px;
+    margin: 0;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.upload-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.upload-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.upload-container input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-container button:hover {
+    background-color: #0056b3;
+}
+
+.matches-container {
+    margin-top: 150px;
+}
+
+.matches-body {
+    height: 3000px;
+}
+
+.weeks-container {
+    width: 30%;
+}
+
+.match-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;        
+}

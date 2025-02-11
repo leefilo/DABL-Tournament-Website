@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ match_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/match_results.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+</head>
+<body class="match-results-body">
+
+    <header class="header">
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='images/dabl-new-logo-v4.png') }}" alt="DABL Logo" class="logo">
+        </div>
+        <div class="middle-section"> 
+            <a href="{{ url_for('homepage') }}"><button class="home-button">Home</button></a>
+            <a href="{{ url_for('matches') }}"><button class="matches-button">Matches</button></a>    
+            <a href="{{ url_for('teams') }}"><button class="teams-button">Teams</button></a>
+            <a href="{{ url_for('contact') }}"><button class="contact-button">Contact</button></a>
+        </div>
+    </header>
+    
+    <div class="match-results-container">
+        <div class="match-results-sign">
+            <h1>Match Results: {{ match_id }}</h1>
+        </div>
+
+        <div class="team-logos">
+            <div class="team">
+                <img src="{{ url_for('static', filename='images/teams/' + team1 + '.png') }}" alt="{{ team1 }} Logo">
+                <p>{{ team1 }}</p>
+            </div>
+            <span>vs</span>
+            <div class="team">
+                <img src="{{ url_for('static', filename='images/teams/' + team2 + '.png') }}" alt="{{ team2 }} Logo">
+                <p>{{ team2 }}</p>
+            </div>
+        </div>
+        
+        <div class="tables">
+            <div class="table-container">
+                <h2>{{ team1 }} Stats</h2>
+                {{ table_html_team1|safe }}
+            </div>
+            <div class="table-container">
+                <h2>{{ team2 }} Stats</h2>
+                {{ table_html_team2|safe }}
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <a href="{{ url_for('matches') }}">Back to Matches</a>
+</body>
+</html>

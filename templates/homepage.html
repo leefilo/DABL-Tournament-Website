@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homepage</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/matches.css') }}">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
+    </head>
+
+    <body class="homepage-body">
+        <header class="header">
+
+            <div class="left-section">
+                <img src="{{ url_for('static', filename='images/dabl-new-logo-v4.png') }}" alt="DABL Logo" class="logo">
+            </div>
+
+            <div class="middle-section"> 
+                <a href="{{ url_for('homepage') }}">
+                    <button class="home-button">Home</button>
+                </a>
+                <a href="{{ url_for('matches') }}">
+                    <button class="matches-button">Matches</button>
+                </a>    
+                <a href="{{ url_for('teams') }}">
+                    <button class="teams-button">Teams</button>
+                </a>
+                <a href="{{ url_for('contact') }}">
+                    <button class="contact-button">Contact</button>
+                </a>
+            </div>
+        
+        </header>
+
+        <div class="info-header">
+            <h1 class="welcome-sign">WELCOME TO THE DFW ASIAN BASKETBALL LEAGUE</h1>
+        </div>
+
+        
+        <div class="carousel">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo-1.jpg') }}" style="width:100%">
+                    <div class="text">7ONE3</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo-2.jpg') }}" style="width:100%">
+                    <div class="text">BUCKETS&BEERS</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo-3.jpg') }}" style="width:100%">
+                    <div class="text">SLOWMOTION</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo4.jpg') }}" style="width:100%">
+                    <div class="text">DALLAS OG</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo5.jpg') }}" style="width:100%">
+                    <div class="text">HIMALAYAN HOOPS</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo6.jpg') }}" style="width:100%">
+                    <div class="text">AIRBENDERS</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo7.jpg') }}" style="width:100%">
+                    <div class="text">SWOOSH BROS</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo8.jpg') }}" style="width:100%">
+                    <div class="text">CHAUSVAULT</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo9.jpg') }}" style="width:100%">
+                    <div class="text">HIDDEN LEAF</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo10.jpg') }}" style="width:100%">
+                    <div class="text">KABAD</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">11 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo11.jpg') }}" style="width:100%">
+                    <div class="text">OFFSUIT</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">12 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo12.jpg') }}" style="width:100%">
+                    <div class="text">BBL GAWBLINS</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">13 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo13.jpg') }}" style="width:100%">
+                    <div class="text">SMALL BALL</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">14 / 14</div>
+                    <img src="{{ url_for('static', filename='images/carousel-photo14.jpg') }}" style="width:100%">
+                    <div class="text">FREE AGENTS</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div> 
+        </div>
+
+        <div class="content">
+            <div class="info-paragraphs">
+                <p>
+                    DFW Asian Basketball League (DABL) is a basketball league that was established in 2018. 
+                    The league is based in the Dallas-Fort Worth area and has teams from all over the metroplex.  
+                </p>
+            </div>
+        </div>
+
+        <div class="homepage-content-container">
+            <div class="homepage-set1-image">
+                <img src="{{ url_for('static', filename='images/mirror-layup1.jpg') }}"  class="homepage-image1">
+            </div>
+
+            <div class="homepage-set1-text">
+                <p class="compete-text">Competition</p>
+            </div>
+
+            <div class="homepage-set1-image2">
+                <img src="{{ url_for('static', filename='images/mirror-layup2.jpg') }}"  class="homepage-image2">
+            </div>
+
+        </div>
+
+        <div class="homepage-content-container2">
+            <div class="homepage-set2-image">
+                <img src="{{ url_for('static', filename='images/pressure-image4.jpg') }}"  class="homepage-image3">
+            </div>
+
+            <div class="homepage-set2-text">
+                <p class="pressure-text">Pressure</p>
+            </div>
+
+            <div class="homepage-set2-image2">
+                <img src="{{ url_for('static', filename='images/pressure-image3.jpg') }}"  class="homepage-image4">
+            </div>
+        </div>
+
+        <div class="last-homepage-container">
+            <div class="homepage-last-image">
+                <img src="{{ url_for('static', filename='images/homepage_picture3.jpg') }}"  class="victory-image">
+            </div>
+
+            <div class="homepage-last-text">
+                <p class="victory-text">Victory</p>
+            </div>
+        </div>
+
+        <div class="footer">
+        
+            <div class="footer-content">
+
+            <p class="footer-text">
+
+                <a href="https://www.facebook.com/DFWABL" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbook-icon.png') }}" alt="Facebook" class="social-icon">
+                </a>
+            
+            </p> 
+
+            </div>
+        
+        </div>
+
+        <!-- JavaScript File -->
+        <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+
+    </body>
+</html>

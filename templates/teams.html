@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DABL</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/general.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/matches.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/teams.css') }}">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='images/dabl-new-logo-v4.png') }}" alt="DABL Logo" class="logo">
+        </div>
+        <div class="middle-section"> 
+            <a href="{{ url_for('homepage') }}"><button class="home-button">Home</button></a>
+            <a href="{{ url_for('matches') }}"><button class="matches-button">Matches</button></a>    
+            <a href="{{ url_for('teams') }}"><button class="teams-button">Teams</button></a>
+            <a href="{{ url_for('contact') }}"><button class="contact-button">Contact</button></a>
+        </div>
+    </header>
+
+    <div class="teams-container">
+        <h1>Teams</h1>
+        <div class="teams-grid">
+            {% for team in teams %}
+                <a href="{{ url_for('display_team', team_name=team) }}" class="team-box">
+                    <img src="{{ url_for('static', filename='images/teams/' + team + '.png') }}" alt="{{ team }} Logo">
+                    <p>{{ team }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% if team_name %}
+    <div class="team-details">
+        <h1>{{ team_name }} Members</h1>
+        <div class="table-container">
+            {{ table_html|safe }}
+        </div>
+        <br>
+        <a href="{{ url_for('teams') }}">Back to Teams</a>
+    </div>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+</html>
